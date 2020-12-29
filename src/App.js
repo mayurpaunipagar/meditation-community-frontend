@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './images/ashok-chakra.png';
 import './App.css';
 
 function App() {
@@ -8,7 +8,7 @@ function App() {
       <h1>Meditation Community</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+         coming soon ...
         </p>
         
       </header>
