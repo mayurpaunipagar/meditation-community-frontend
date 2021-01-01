@@ -17,10 +17,10 @@ function App() {
         <div>
           <Switch>
             <Route path="/sign-in">
-              <SignIn/>
+              <SignIn />
             </Route>
             <Route path="/sign-up">
-              <SignUp/>
+              <SignUp />
             </Route>
             <Route path="/">
               <header className="App-header">
@@ -30,10 +30,8 @@ function App() {
                 <div className="login">
                   <Link to="/sign-in"><Button className="btn" color="success">Sign In</Button></Link>
                   <Link to="/sign-up"><Button className="btn" color="success">Sign Up</Button></Link>
-
                 </div>
               </header>
-
             </Route>
           </Switch>
         </div>
