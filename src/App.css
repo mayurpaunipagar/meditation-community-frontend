@@ -41,7 +41,7 @@
   display: flex;
   flex-direction: row;
 }
-.btn{
-  background-color: rgb(183, 38, 38);
+.login .btn{
+  background-color: rgb(17, 88, 17);
   margin:20px;
 }
