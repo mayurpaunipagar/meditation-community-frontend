@@ -12,8 +12,8 @@ function App() {
           A platform to connect with all meditators around the world.
         </p>
         <div className="login">
-            <Button className="btn">Sign In</Button>
-            <Button className="btn">Sign Up</Button>
+            <Button className="btn" color="success">Sign In</Button>
+            <Button className="btn" color="success">Sign Up</Button>
         </div>
 
       </header>
