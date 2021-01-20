@@ -4,6 +4,10 @@ import React from 'react';
 import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 
 function SignUp() {
+    const worksForMe=(event)=>{
+        event.preventDefault();
+        console.log("mayur");
+    }
     return (
         <div className="App">
             <header className="App-header">
@@ -22,7 +26,7 @@ function SignUp() {
                     <FormGroup>
                         <Input type="password" name="password" id="examplePassword" placeholder="password" />
                     </FormGroup>
-                    <Button color="success" className="SubmitBtn">Submit</Button>
+                    <Button color="success" className="SubmitBtn" onClick={worksForMe}>Submit</Button>
                 </Form>
             </div>
         </div>
