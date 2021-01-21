@@ -1,13 +1,56 @@
 import logo from './../images/ashok-chakra.png';
 import './../App.css';
-import React from 'react';
-import { Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import React, { useState } from 'react';
+import { Button, Form, FormGroup, Input } from 'reactstrap';
 
 function SignUp() {
-    const worksForMe=(event)=>{
+    const [fullName, setFullName] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [submitBtn,setSubmitBtn] = useState(false);
+
+    const submitUserData = (event) => {
         event.preventDefault();
-        console.log("mayur");
+        const userObj={
+            fullName,
+            email,
+            password
+        }
+        const requestOptions = {
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            mode: 'cors', // no-cors, *cors, same-origin
+            cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+            credentials: 'same-origin', // include, *same-origin, omit
+            headers: {
+              'Content-Type': 'application/json'
+              // 'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            redirect: 'follow', // manual, *follow, error
+            referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+            body: JSON.stringify(userObj) // body data type must match "Content-Type" header
+          };
+          fetch('http://localhost:9999/sign-up',requestOptions )
+          .then((r)=>{
+              return r.json();
+          })
+          .then((r)=>{
+              console.log(r);
+          })
+          .catch((e)=>{
+              console.error(e);
+          })
     }
+
+    const checkAllData = ()=>{
+        if(fullName.trim()!=="" && 
+        email.trim()!=="" && 
+        password.trim()!==""){
+            setSubmitBtn(true);
+        }else{
+            setSubmitBtn(false);
+        }
+    }
+
     return (
         <div className="App">
             <header className="App-header">
@@ -18,19 +61,51 @@ function SignUp() {
             <div className="login-form">
                 <Form>
                     <FormGroup>
-                        <Input type="text" name="full-name" placeholder="Full Name"></Input>
+                        <Input type="text"
+                            name="full-name"
+                            placeholder="Full Name"
+                            onKeyUp={checkAllData}
+                            onChange={(event)=>{
+                                setFullName(event.target.value);
+                                checkAllData();
+                            } }
+                            value={fullName}>
+                        </Input>
                     </FormGroup>
                     <FormGroup>
-                        <Input type="email" name="email" id="exampleEmail" placeholder="Email" />
+                        <Input type="email"
+                            name="email"
+                            id="exampleEmail"
+                            placeholder="Email"
+                            onKeyUp={checkAllData}
+                            onChange={(event)=>{
+                                setEmail(event.target.value);
+                                checkAllData();
+                            } } 
+                            value={email}/>
                     </FormGroup>
                     <FormGroup>
-                        <Input type="password" name="password" id="examplePassword" placeholder="password" />
+                        <Input type="password"
+                            name="password"
+                            id="examplePassword"
+                            placeholder="password"
+                            onKeyUp={checkAllData}
+                            onChange={(event)=>{
+                                setPassword(event.target.value);
+                                checkAllData();
+                            } }
+                            value={password} />
                     </FormGroup>
-                    <Button color="success" className="SubmitBtn" onClick={worksForMe}>Submit</Button>
+                    <Button color="success"
+                        className="SubmitBtn"
+                        disabled={!submitBtn}
+                        onClick={submitBtn ?submitUserData:null}>
+                        Submit
+                        
+                    </Button>
                 </Form>
             </div>
         </div>
-        
     );
 }
 export default SignUp;
