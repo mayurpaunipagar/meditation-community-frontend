@@ -26,7 +26,7 @@ function SignIn() {
             referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
             body: JSON.stringify(userObj) // body data type must match "Content-Type" header
           };
-        fetch('http://localhost:9999/sign-in',requestOptions )
+        fetch('https://meditation-community-backend.herokuapp.com/sign-in',requestOptions )
             .then((r)=>{
                 return r.json();
             })
