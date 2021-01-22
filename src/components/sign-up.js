@@ -43,12 +43,19 @@ function SignUp() {
 
     const checkAllData = ()=>{
         if(fullName.trim()!=="" && 
-        email.trim()!=="" && 
+        email.trim()!=="" && isEmail(email) &&
         password.trim()!==""){
             setSubmitBtn(true);
         }else{
             setSubmitBtn(false);
         }
+    }
+
+    const isEmail=(email)=>{
+        if ( email.search(/^\w+((-\w+)|(\.\w+))*\@[A-Za-z0-9]+((\.|-)[A-Za-z0-9]+)*\.[A-Za-z0-9]+$/) !== -1 )
+            return true;
+        else
+            return false;
     }
 
     return (
