@@ -2,7 +2,7 @@ import logo from './images/ashok-chakra.png';
 import './App.css';
 import React from 'react';
 import { Button } from 'reactstrap';
-import {useHitory} from 'react-router-dom';
+import {useNavigate} from 'react-router-dom';
 import {
   BrowserRouter as Router,
   Switch,
@@ -13,7 +13,7 @@ import SignIn from './components/sign-in';
 import SignUp from './components/sign-up';
 import Home from './components/home';
 function App() {
-  const history=useHitory();
+  const history=useNavigate();
 
   const setLoggedIn=(booleanValue)=>{
     if(booleanValue){
