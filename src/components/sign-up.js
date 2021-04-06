@@ -3,7 +3,7 @@ import "./../App.css";
 import React, { useState } from "react";
 import { Button, Form, FormGroup, Input } from "reactstrap";
 
-function SignUp() {
+function SignUp(props) {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +19,7 @@ function SignUp() {
     };
     const requestOptions = {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
-      mode: "cors", // no-cors, *cors, same-origin
+      mode: "no-cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       credentials: "include", // include, *same-origin, omit
       headers: {
@@ -40,7 +40,7 @@ function SignUp() {
       .then((r) => {
         console.log(r);
         if(r.status==="ok"){
-            setLoggedIn(true);
+            props.setLoggedIn(true);
         }
       })
       .catch((e) => {
