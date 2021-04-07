@@ -2,7 +2,6 @@ import logo from './images/ashok-chakra.png';
 import './App.css';
 import React from 'react';
 import { Button } from 'reactstrap';
-import {useHistory} from 'react-router-dom';
 import {
   BrowserRouter as Router,
   Switch,
@@ -11,28 +10,17 @@ import {
 } from "react-router-dom";
 import SignIn from './components/sign-in';
 import SignUp from './components/sign-up';
-import Home from './components/home';
 function App() {
-  const history=useHistory();
-
-  const setLoggedIn=(booleanValue)=>{
-    if(booleanValue){
-      history.push("/home");
-    }
-  }
   return (
     <div className="App">
       <Router>
         <div>
           <Switch>
             <Route path="/sign-in">
-              <SignIn setLoggedIn={setLoggedIn}/>
+              <SignIn />
             </Route>
             <Route path="/sign-up">
-              <SignUp setLoggedIn={setLoggedIn}/>
-            </Route>
-            <Route path="/home">
-              <Home />
+              <SignUp />
             </Route>
             <Route path="/">
               <header className="App-header">

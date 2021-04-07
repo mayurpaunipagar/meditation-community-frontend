@@ -2,7 +2,7 @@ import logo from './../images/ashok-chakra.png';
 import './../App.css';
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Input } from 'reactstrap';
-function SignIn(props) {
+function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [submitBtn, setSubmitBtn] = useState(false);
@@ -15,9 +15,9 @@ function SignIn(props) {
         }
         const requestOptions = {
             method: 'POST', // *GET, POST, PUT, DELETE, etc.
-            mode: 'no-cors', // no-cors, *cors, same-origin
+            mode: 'cors', // no-cors, *cors, same-origin
             cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-            credentials: 'include', // include, *same-origin, omit
+            credentials: 'same-origin', // include, *same-origin, omit
             headers: {
               'Content-Type': 'application/json'
               // 'Content-Type': 'application/x-www-form-urlencoded',
@@ -32,9 +32,6 @@ function SignIn(props) {
             })
             .then((r)=>{
                 console.log(r);
-                if(r.status==="ok"){
-                    props.setLoggedIn(true);
-                }
             })
             .catch((e)=>{
                 console.error(e);
