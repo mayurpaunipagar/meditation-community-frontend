@@ -6,12 +6,17 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignIn from "./components/sign-in";
 import SignUp from "./components/sign-up";
 import Home from "./components/home";
+import Advertise from "./components/advertise";
+import LoginSelector from "./components/login-selector";
 function App() {
   return (
     <div className="App">
       <Router>
         <div>
           <Switch>
+            <Route path="/login-selector">
+              <LoginSelector />
+            </Route>
             <Route path="/home">
               <Home />
             </Route>
@@ -22,23 +27,7 @@ function App() {
               <SignUp />
             </Route>
             <Route path="/">
-              <header className="App-header">
-                <h1>Meditation Community</h1>
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>A platform to connect with meditators around the world.</p>
-                <div className="login">
-                  <Link to="/sign-in">
-                    <Button className="btn" color="success">
-                      Sign In
-                    </Button>
-                  </Link>
-                  <Link to="/sign-up">
-                    <Button className="btn" color="success">
-                      Sign Up
-                    </Button>
-                  </Link>
-                </div>
-              </header>
+              <Advertise />
             </Route>
           </Switch>
         </div>
