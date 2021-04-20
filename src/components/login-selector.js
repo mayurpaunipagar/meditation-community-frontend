@@ -1,5 +1,5 @@
 import { useHistory } from "react-router";
-import logo from "./images/ashok-chakra.png";
+import logo from "../images/ashok-chakra.png";
 import { Button } from "reactstrap";
 
 function LoginSelector() {
