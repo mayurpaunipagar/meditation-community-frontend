@@ -2,10 +2,17 @@ import logo from './../images/ashok-chakra.png';
 import './../App.css';
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Input } from 'reactstrap';
+import { useHistory } from "react-router-dom";
+
 function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [submitBtn, setSubmitBtn] = useState(false);
+
+    const routeToHomePage = ()=>{
+        let history = useHistory();
+        history.push("/home");
+    }
 
     const submitUserData = (event) => {
         event.preventDefault();
@@ -35,6 +42,7 @@ function SignIn() {
                 if(r.status==="ok"){
                     // Route to home page
                     console.log("I am in home page");
+                    routeToHomePage();
                 }
             })
             .catch((e)=>{
