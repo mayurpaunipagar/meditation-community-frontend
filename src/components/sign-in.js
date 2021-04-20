@@ -8,9 +8,9 @@ function SignIn() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [submitBtn, setSubmitBtn] = useState(false);
+    const history = useHistory();
 
-    const RouteToHomePage = ()=>{
-        let history = useHistory();
+    const routeToHomePage = ()=>{
         history.push("/home");
     }
 
@@ -42,7 +42,7 @@ function SignIn() {
                 if(r.status==="ok"){
                     // Route to home page
                     console.log("I am in home page");
-                    RouteToHomePage(); // capitalized the function because useHistory didn't work
+                    routeToHomePage(); // capitalized the function because useHistory didn't work
                 }
             })
             .catch((e)=>{
