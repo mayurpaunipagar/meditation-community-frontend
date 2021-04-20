@@ -21,7 +21,7 @@ function LoginSelector() {
             Sign In
           </Button>
 
-          <Button className="btn" color="success">
+          <Button className="btn" color="success" onClick={routeToSignUp}>
             Sign Up
           </Button>
         </div>
