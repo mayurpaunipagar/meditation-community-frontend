@@ -1,4 +1,4 @@
-import { Button } from "bootstrap";
+import { Button } from "reactstrap";
 import { useHistory } from "react-router";
 
 function Advertise() {
