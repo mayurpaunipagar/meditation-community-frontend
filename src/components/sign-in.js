@@ -32,6 +32,10 @@ function SignIn() {
             })
             .then((r)=>{
                 console.log(r);
+                if(r.status==="ok"){
+                    // Route to home page
+                    console.log("I am in home page");
+                }
             })
             .catch((e)=>{
                 console.error(e);
