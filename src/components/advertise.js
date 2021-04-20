@@ -1,6 +1,6 @@
 import { Button } from "bootstrap";
 import { useHistory } from "react-router";
-import "./App.css";
+
 function Advertise() {
   const history = useHistory();
   const routeToLoginSelector = () => {

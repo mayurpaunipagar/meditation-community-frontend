@@ -1,5 +1,5 @@
 import { useHistory } from "react-router";
-import "./App.css";
+
 function LoginSelector() {
   const history = useHistory();
   const routeToSignIn = () => {
