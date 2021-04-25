@@ -1,6 +1,7 @@
 import { useHistory } from "react-router";
 import logo from "../images/ashok-chakra.png";
 import { Button } from "reactstrap";
+import NavigationBar from "./navigation-bar";
 
 function LoginSelector() {
   const history = useHistory();
@@ -12,6 +13,7 @@ function LoginSelector() {
   };
   return (
     <>
+      <NavigationBar />
       <div className="App">
         <header className="App-header">
           <h1>Meditation Community</h1>

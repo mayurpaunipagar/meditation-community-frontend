@@ -12,7 +12,7 @@ function Advertise() {
     <>
     <div className="advertise">
     <NavigationBar routeToLoginSelector={routeToLoginSelector}/>
-      {/* <ImageSlider /> */}
+      <ImageSlider />
       {/* <div className="home">I am Advertisement</div> */}
     </div>
     </>

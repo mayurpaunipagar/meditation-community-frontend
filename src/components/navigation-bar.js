@@ -6,12 +6,12 @@ import {
   NavbarToggler,
   NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
+  // NavItem,
+  // NavLink,
+  // UncontrolledDropdown,
+  // DropdownToggle,
+  // DropdownMenu,
+  // DropdownItem,
   NavbarText,
 } from "reactstrap";
 import logo from "./../images/ashok-chakra.png";
@@ -23,7 +23,7 @@ const NavigationBar = (props) => {
 
   return (
     <>
-      <Navbar color="dark" dark expand="xl">
+      <Navbar color="light" light expand="xl">
         <NavbarBrand href="/">
           <img src={logo} className="App-logo-small" alt="logo" />
         </NavbarBrand>
@@ -41,7 +41,7 @@ const NavigationBar = (props) => {
           </Button>
           </Nav>
         </Collapse>
-
+        <NavbarText>Meditation Community</NavbarText>
       </Navbar>
     </>
   );

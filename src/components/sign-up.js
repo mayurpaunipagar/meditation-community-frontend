@@ -3,6 +3,7 @@ import './../App.css';
 import React, { useState } from 'react';
 import { Button, Form, FormGroup, Input } from 'reactstrap';
 import { useHistory } from 'react-router';
+import NavigationBar from './navigation-bar';
 
 function SignUp() {
     const [fullName, setFullName] = useState("");
@@ -70,6 +71,8 @@ function SignUp() {
     }
 
     return (
+        <>
+        <NavigationBar />
         <div className="App">
             <header className="App-header">
                 <h1>Meditation Community</h1>
@@ -124,6 +127,7 @@ function SignUp() {
                 </Form>
             </div>
         </div>
+        </>
     );
 }
 export default SignUp;
