@@ -1,5 +1,7 @@
 import { Button } from "reactstrap";
 import { useHistory } from "react-router";
+import NavigationBar from "./navigation-bar";
+import ImageSlider from "./image-slider";
 
 function Advertise() {
   const history = useHistory();
@@ -8,10 +10,14 @@ function Advertise() {
   };
   return (
     <>
+    <div className="advertise">
+    <NavigationBar />
+      <ImageSlider />
       <div className="home">I am Advertisement</div>
       <Button className="btn" onClick={routeToLoginSelector}>
         Get Started
       </Button>
+    </div>
     </>
   );
 }

@@ -1,7 +1,6 @@
-import logo from "./images/ashok-chakra.png";
+
 import "./App.css";
 import React from "react";
-import { Button } from "reactstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import SignIn from "./components/sign-in";
 import SignUp from "./components/sign-up";
@@ -10,7 +9,7 @@ import Advertise from "./components/advertise";
 import LoginSelector from "./components/login-selector";
 function App() {
   return (
-    <div className="App">
+    <div>
       <Router>
         <div>
           <Switch>

@@ -12,20 +12,22 @@ function LoginSelector() {
   };
   return (
     <>
-      <header className="App-header">
-        <h1>Meditation Community</h1>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>A platform to connect with meditators around the world.</p>
-        <div className="login">
-          <Button className="btn" color="success" onClick={routeToSignIn}>
-            Sign In
-          </Button>
+      <div className="App">
+        <header className="App-header">
+          <h1>Meditation Community</h1>
+          <img src={logo} className="App-logo" alt="logo" />
+          <p>A platform to connect with meditators around the world.</p>
+          <div className="login">
+            <Button className="btn" color="success" onClick={routeToSignIn}>
+              Sign In
+            </Button>
 
-          <Button className="btn" color="success" onClick={routeToSignUp}>
-            Sign Up
-          </Button>
-        </div>
-      </header>
+            <Button className="btn" color="success" onClick={routeToSignUp}>
+              Sign Up
+            </Button>
+          </div>
+        </header>
+      </div>
     </>
   );
 }

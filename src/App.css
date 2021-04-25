@@ -14,8 +14,15 @@
   pointer-events: none;
 }
 
+.App-logo-small {
+  height: 70px;
+  pointer-events: none;
+  float:left;
+}
+
+
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
+  .App-logo, .App-logo-small {
     animation: App-logo-spin infinite 20s linear;
   }
 }
@@ -78,3 +85,4 @@
   justify-content: center;
   align-items: center;
 }
+
