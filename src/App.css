@@ -60,6 +60,7 @@
   background-color: rgb(17, 88, 17);
   margin:20px;
 }
+
 .app-logo1{
   display: flex;
   flex-direction: row;
@@ -86,3 +87,7 @@
   align-items: center;
 }
 
+.mybtn{
+  background-color: rgb(17, 88, 17);
+  margin:20px;
+}
