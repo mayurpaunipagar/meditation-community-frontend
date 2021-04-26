@@ -6,9 +6,9 @@ const Introduction = (props) => {
     <div>
       <Jumbotron>
         <h1 className="display-3">Meditation Community</h1>
-        <p className="lead">This is a simple hero unit, a simple Jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p className="lead">Here you can connect with all meditators whose goal is to end there suffering by removing craving, aversion and ignorance.</p>
         <hr className="my-2" />
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>Chat with meditators around you or world and find right place to meditate and discuss dhamma or technique of meditation. Community can help you stay consistent in your practice.</p>
         <p className="lead">
           <Button color="primary">Learn More</Button>
         </p>
