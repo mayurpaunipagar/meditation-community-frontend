@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Button } from "reactstrap";
+import Logo from './logo';
 import {
   Collapse,
   Navbar,
@@ -24,7 +25,7 @@ const NavigationBar = (props) => {
     <>
       <Navbar color="light" light expand="xl">
         <NavbarBrand href="/">
-          <img src={logo} className="App-logo-small" alt="logo" />
+          <Logo />
         </NavbarBrand>
         {props.isGetStarted?(
           <Nav>
