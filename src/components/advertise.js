@@ -2,6 +2,7 @@
 import { useHistory } from "react-router";
 import NavigationBar from "./navigation-bar";
 import ImageSlider from "./image-slider";
+import Introduction from "./introduction";
 
 function Advertise() {
   const history = useHistory();
@@ -11,8 +12,9 @@ function Advertise() {
   return (
     <>
     <div className="advertise">
-    <NavigationBar routeToLoginSelector={routeToLoginSelector}/>
+    <NavigationBar routeToLoginSelector={routeToLoginSelector} isGetStarted/>
       <ImageSlider />
+      <Introduction/>
       {/* <div className="home">I am Advertisement</div> */}
     </div>
     </>

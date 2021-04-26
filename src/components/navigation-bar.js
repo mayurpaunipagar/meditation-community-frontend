@@ -18,7 +18,6 @@ import logo from "./../images/ashok-chakra.png";
 
 const NavigationBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggle = () => setIsOpen(!isOpen);
 
   return (
@@ -27,11 +26,13 @@ const NavigationBar = (props) => {
         <NavbarBrand href="/">
           <img src={logo} className="App-logo-small" alt="logo" />
         </NavbarBrand>
-        <Nav>
+        {props.isGetStarted?(
+          <Nav>
           <Button className="mybtn" color="success" onClick={props.routeToLoginSelector}>
             Get Started
           </Button>
         </Nav>
+        ):(null)}
         <NavbarToggler onClick={toggle} />
         
         <Collapse isOpen={isOpen} navbar>
