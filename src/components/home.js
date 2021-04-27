@@ -1,5 +1,16 @@
+import NavigationBar from './navigation-bar';
+import Footer from './footer';
+
 function Home(){
-    return <div className="home">I am home</div>;
+    //navigation bar
+    //chatbox
+    //footer
+    return (
+        <>
+            <NavigationBar />
+            <Footer />
+        </>
+    )
 }
 
 export default Home;

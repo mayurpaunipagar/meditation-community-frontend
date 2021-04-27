@@ -34,7 +34,7 @@ function Footer() {
              Meditation Community
             </Link>
           </div>
-          <small className='website-rights'>MeditationCommunity©2021</small>
+          {/* <small className='website-rights'>MeditationCommunity©2021</small> */}
           <div className='social-icons'>
             <Link
               className='social-icon-link'

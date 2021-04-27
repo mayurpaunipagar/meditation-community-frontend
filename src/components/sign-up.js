@@ -118,7 +118,7 @@ function SignUp() {
                             value={password} />
                     </FormGroup>
                     <Button color="success"
-                        className="SubmitBtn"
+                        
                         disabled={!submitBtn}
                         onClick={submitBtn ?submitUserData:null}>
                         Submit

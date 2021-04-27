@@ -112,7 +112,7 @@ function SignIn() {
             </FormGroup>
             <Button
               color="success"
-              className="SubmitBtn"
+              
               onClick={submitUserData}
               disabled={!submitBtn}
             >

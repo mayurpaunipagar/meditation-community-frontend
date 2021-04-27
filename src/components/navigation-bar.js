@@ -15,7 +15,6 @@ import {
   // DropdownItem,
   NavbarText,
 } from "reactstrap";
-import logo from "./../images/ashok-chakra.png";
 
 const NavigationBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);

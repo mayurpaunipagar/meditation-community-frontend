@@ -1,7 +1,7 @@
 
 import "./App.css";
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import SignIn from "./components/sign-in";
 import SignUp from "./components/sign-up";
 import Home from "./components/home";
@@ -9,6 +9,7 @@ import Advertise from "./components/advertise";
 import LoginSelector from "./components/login-selector";
 function App() {
   return (
+    <>
     <div>
       <Router>
         <div>
@@ -32,6 +33,7 @@ function App() {
         </div>
       </Router>
     </div>
+    </>
   );
 }
 
