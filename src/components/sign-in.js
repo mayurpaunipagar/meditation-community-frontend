@@ -4,11 +4,14 @@ import React, { useState } from "react";
 import { Button, Form, FormGroup, Input } from "reactstrap";
 import { useHistory } from "react-router-dom";
 import NavigationBar from "./navigation-bar";
+import Spinner from "react-bootstrap/Spinner";
+
 
 function SignIn() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [submitBtn, setSubmitBtn] = useState(false);
+  const [loading,setLoading]=useState(false);
   const history = useHistory();
 
   const routeToHomePage = () => {
@@ -16,6 +19,7 @@ function SignIn() {
   };
 
   const submitUserData = (event) => {
+    setLoading(true);
     event.preventDefault();
     const userObj = {
       email,
@@ -46,11 +50,13 @@ function SignIn() {
         if (r.status === "ok") {
           // Route to home page
           console.log("I am in home page");
+          setLoading(false);
           routeToHomePage();
         }
       })
       .catch((e) => {
         console.error(e);
+        setLoading(false);
       });
   };
 
@@ -71,7 +77,11 @@ function SignIn() {
     else return false;
   };
 
-  return (
+  return (loading?(<>
+    <div className="loadingStyle">
+    <Spinner animation="grow" />
+    </div>
+    </>):(
     <>
       <NavigationBar />
       <div className="App">
@@ -121,7 +131,7 @@ function SignIn() {
           </Form>
         </div>
       </div>
-    </>
+    </>)
   );
 }
 export default SignIn;

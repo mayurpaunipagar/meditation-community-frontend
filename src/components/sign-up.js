@@ -1,7 +1,8 @@
 import logo from "./../images/ashok-chakra.png";
 import "./../App.css";
 import React, { useState } from "react";
-import { Button, Form, FormGroup, Input, Spinner } from "reactstrap";
+import { Button, Form, FormGroup, Input } from "reactstrap";
+import Spinner from "react-bootstrap/Spinner";
 import { useHistory } from "react-router";
 import NavigationBar from "./navigation-bar";
 
@@ -87,7 +88,9 @@ function SignUp() {
     <>
       {loading ? (
           <>
-          <Spinner animation="grow"/>
+          <div className="loadingStyle">
+          <Spinner animation="grow" />
+          </div>
           </>
       ) : (
         <>
