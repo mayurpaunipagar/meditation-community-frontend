@@ -5,6 +5,7 @@ import { Button, Form, FormGroup, Input } from "reactstrap";
 import { useHistory } from "react-router-dom";
 import NavigationBar from "./navigation-bar";
 import Spinner from "react-bootstrap/Spinner";
+import { BACKEND_URL } from "../config";
 
 
 function SignIn() {
@@ -39,7 +40,7 @@ function SignIn() {
       body: JSON.stringify(userObj), // body data type must match "Content-Type" header
     };
     fetch(
-      "https://meditation-community-backend.herokuapp.com/sign-in",
+      BACKEND_URL+"/sign-in",
       requestOptions
     )
       .then((r) => {

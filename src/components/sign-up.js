@@ -5,6 +5,7 @@ import { Button, Form, FormGroup, Input } from "reactstrap";
 import Spinner from "react-bootstrap/Spinner";
 import { useHistory } from "react-router";
 import NavigationBar from "./navigation-bar";
+import { BACKEND_URL } from "../config";
 
 function SignUp() {
   const [fullName, setFullName] = useState("");
@@ -12,6 +13,7 @@ function SignUp() {
   const [password, setPassword] = useState("");
   const [submitBtn, setSubmitBtn] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error,setError]=useState("");
   const history = useHistory();
 
   const routeToHomePage = () => {
@@ -40,7 +42,7 @@ function SignUp() {
       body: JSON.stringify(userObj), // body data type must match "Content-Type" header
     };
     fetch(
-      "https://meditation-community-backend.herokuapp.com/sign-up",
+      BACKEND_URL+"/sign-up",
       requestOptions
     )
       .then((r) => {
@@ -53,6 +55,9 @@ function SignUp() {
           console.log("I am in home page");
           setLoading(false);
           routeToHomePage();
+        }else if(r.status=== "failed"){
+          setError(r.error);
+          setLoading(false);
         }
       })
       .catch((e) => {
@@ -102,6 +107,7 @@ function SignUp() {
               <p>First step to calm your mind</p>
             </header>
             <div className="login-form">
+              <div>{`Error: ${error}`}</div>
               <Form>
                 <FormGroup>
                   <Input
