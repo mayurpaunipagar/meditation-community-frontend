@@ -1,5 +1,6 @@
 import NavigationBar from './navigation-bar';
 import Footer from './footer';
+import ChatBox from './chatbox';
 
 function Home(){
     //navigation bar
@@ -8,6 +9,7 @@ function Home(){
     return (
         <>
             <NavigationBar />
+            <ChatBox/>
             <Footer />
         </>
     )
