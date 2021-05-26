@@ -3,7 +3,7 @@ import { Jumbotron, Button } from 'reactstrap';
 
 const Introduction = (props) => {
   return (
-    <div>
+    <div className="jumbotron-container">
       <Jumbotron>
         <h1 className="display-4">Meditation Community</h1>
         <p className="lead">Here you can connect with all meditators whose goal is to end there suffering by removing craving, aversion and ignorance.</p>
