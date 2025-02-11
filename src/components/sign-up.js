@@ -21,6 +21,7 @@ function SignUp() {
   };
 
   const submitUserData = (event) => {
+     console.log("I am working mayur")
     setLoading(true);
     event.preventDefault();
     const userObj = {
@@ -50,7 +51,7 @@ function SignUp() {
       })
       .then((r) => {
         console.log(r);
-        if (r.status === "ok") {
+        if (r.status ) {
           // Route to home page
           console.log("I am in home page");
           setLoading(false);
@@ -107,7 +108,7 @@ function SignUp() {
               <p>First step to calm your mind</p>
             </header>
             <div className="login-form">
-              <div>{`Error: ${error}`}</div>
+              {/* <div>{`Error: ${error}`}</div> */}
               <Form>
                 <FormGroup>
                   <Input

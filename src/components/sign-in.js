@@ -20,6 +20,8 @@ function SignIn() {
   };
 
   const submitUserData = (event) => {
+    console.log("I am working mayur")
+
     setLoading(true);
     event.preventDefault();
     const userObj = {
@@ -28,7 +30,7 @@ function SignIn() {
     };
     const requestOptions = {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
-      // mode: "cors", // no-cors, *cors, same-origin
+      mode: "cors", // no-cors, *cors, same-origin
       // cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       // credentials: "same-origin", // include, *same-origin, omit
       headers: {
@@ -36,7 +38,7 @@ function SignIn() {
         // 'Content-Type': 'application/x-www-form-urlencoded',
       },
       // redirect: "follow", // manual, *follow, error
-      // referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      referrerPolicy: "no-referrer", // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
       body: JSON.stringify(userObj), // body data type must match "Content-Type" header
     };
     fetch(
@@ -48,7 +50,7 @@ function SignIn() {
       })
       .then((r) => {
         console.log(r);
-        if (r.status === "ok") {
+        if (r.status ) {
           // Route to home page
           console.log("I am in home page1");
           setLoading(false);
@@ -56,6 +58,7 @@ function SignIn() {
         }
       })
       .catch((e) => {
+        console.log("I am in error page1");
         console.error(e);
         setLoading(false);
       });
