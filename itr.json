@@ -1,0 +1,115 @@
+{
+    "personalInfo": {
+        "fatherName": "MACHINDRA DAMODHAR PAUNIPAGAR",
+        "orgFirmInfo": {
+            "AssesseeName": {
+                "SurNameOrOrgName": "PAUNIPAGAR"
+            },
+            "DateOFFormOrIncorp": "1994-12-19",
+            "StatusOrCompanyType": "IND"
+        },
+        "address": {
+            "zipCode": "",
+            "localityOrArea": "Nagpur (Urban)",
+            "residenceNo": "s/o Machindra Paunipagar Near Meshram Atta Chakki",
+            "cityOrTownOrDistrict": "NAGPUR",
+            "mobileNo": 9158228119,
+            "emailAddressSecondary": "",
+            "emailAddress": "007mayur94@gmail.com",
+            "countryCodeMobile": 91,
+            "phone": {},
+            "countryCode": "91",
+            "roadOrStreet": "Seminary Hills S.O",
+            "pinCode": 440006,
+            "stateCode": "19",
+            "residenceName": "Bhim jyoti buddha vihar gupta chowk Surendagadh "
+        },
+        "assesseeName": {
+            "firstName": "MAYUR",
+            "surNameOrOrgName": "PAUNIPAGAR",
+            "middleName": "MACHINDRA"
+        },
+        "portugeseCC5A": "",
+        "assesseeVerName": "MAYUR MACHINDRA PAUNIPAGAR",
+        "capacity": "S",
+        "filingStatus": {
+            "residentialStatus": "RES"
+        },
+        "assesseVerPan": "CIGPP4586A",
+        "dob": "1994-12-19",
+        "aadhaarCardNo": "NTE3NTI0NTYwMjI2",
+        "pan": "CIGPP4586A",
+        "status": "I"
+    },
+    "orgFirmInfo": null,
+    "form10DA": null,
+    "form3CD": null,
+    "scheduleAL": null,
+    "form3CE": null,
+    "form26as": null,
+    "form10IBICID": null,
+    "otherSourceIncome": null,
+    "form10IE": null,
+    "form10CCE": null,
+    "form10CCF": null,
+    "form10CCD": null,
+    "itba": null,
+    "form64D": null,
+    "verification": {
+        "declaration": {
+            "fatherName": "MACHINDRA DAMODHAR PAUNIPAGAR",
+            "assesseeVerPAN": "CIGPP4586A",
+            "assesseeVerName": "MAYUR MACHINDRA PAUNIPAGAR"
+        },
+        "capacity": "S"
+    },
+    "bankAccountDtls": [
+        {
+            "addtnlBankDetails": [
+                {
+                    "useForRefund": "true",
+                    "bankAccountNo": "31412454276",
+                    "bankName": "STATE BANK OF INDIA",
+                    "ifsccode": "SBIN0003678"
+                }
+            ]
+        }
+    ],
+    "form56F": null,
+    "insights": null,
+    "form10CCB": null,
+    "form29b": null,
+    "scheduleCFL": null,
+    "filingStatus": null,
+    "form24q": null,
+    "partAGEN2": null,
+    "ScheduleEI": null,
+    "Form10A": null,
+    "Form10IFA": null,
+    "ais": null,
+    "ScheduleESOP": null,
+    "formCCBA": null,
+    "auditInfo": null,
+    "incDeductionsOthIncCPC": null,
+    "formCCBD": null,
+    "formCCBC": null,
+    "formCCBB": null,
+    "form67": null,
+    "assesseeRep": null,
+    "form66": null,
+    "form10E": null,
+    "Schedule80RA": null,
+    "Form10IA": null,
+    "Schedule80G": null,
+    "form64A": null,
+    "Form10AB": null,
+    "Form10IEA": null,
+    "form10IF": null,
+    "form10AC": null,
+    "form10BOR10BB": null,
+    "natOfBus": null,
+    "filingReturn": null,
+    "lastFiledITR": null,
+    "form3CEA": null,
+    "form3CEB": null
+}

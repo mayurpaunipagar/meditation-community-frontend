@@ -53,8 +53,11 @@ function SignIn() {
         if (r.status ) {
           // Route to home page
           console.log("I am in home page1");
-          setLoading(false);
-          routeToHomePage();
+          setTimeout(() => {
+            setLoading(false);
+            routeToHomePage();
+          }, 3000);
+          
         }
       })
       .catch((e) => {

@@ -54,16 +54,23 @@ function SignUp() {
         if (r.status ) {
           // Route to home page
           console.log("I am in home page");
-          setLoading(false);
-          routeToHomePage();
+          setTimeout(() => {
+            setLoading(false);
+            routeToHomePage();
+          }, 3000);
         }else if(r.status=== "failed"){
-          setError(r.error);
-          setLoading(false);
+          setTimeout(() => {
+            setError(r.error);
+            setLoading(false);
+          }, 3000);
+          
         }
       })
       .catch((e) => {
         console.error(e);
-        setLoading(false);
+        setTimeout(() => {
+          setLoading(false);
+        }, 3000);
       });
   };
 

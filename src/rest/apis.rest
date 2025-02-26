@@ -1,0 +1,33 @@
+GET http://example.com HTTP/1.1
+
+###
+
+GET http://www.google.com HTTP/1.1
+
+
+###
+
+GET http://httpbin.org/json HTTP/1.1
+
+
+###
+POST http://httpbin.org/post HTTP/1.1
+x-my-name: mayur
+
+{
+    "arg1":"value1"
+}
+
+
+###
+PUT url HTTP/1.1
+header name: header value
+
+content
+
+
+###
+DELETE url HTTP/1.1
+
+
+####
